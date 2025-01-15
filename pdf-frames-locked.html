@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<style>iframe, embed, object { width: 75%; height: 75%; border: 1px solid red; }</style>
+</head>
+<body>
+<iframe id="myIframe" src="pwTest.pdf"></iframe>
+<embed id="myEmbed" src="pwTest.pdf"></embed>
+<object id="myObject" type="application/pdf" data="pwTest.pdf"></object> 
+<script>
+  document.getElementById('myEmbed').addEventListener('load', function() {
+    console.log("Embed content has loaded.");
+  });
+
+  document.getElementById('myIframe').addEventListener('load', function() {
+    console.log("IFrame content has loaded.");
+  });
+
+  document.getElementById('myObject').addEventListener('load', function() {
+    console.log("Object content has loaded.");
+  });
+</script>
+<!-- <object type="application/pdf" data="pwTest.pdf"></object>  -->
+</body>
+</html>
